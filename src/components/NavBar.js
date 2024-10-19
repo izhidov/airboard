@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithRedirect,
+} from "firebase/auth";
 
 const NavBar = () => {
   const [user] = useAuthState(auth);
-  console.log("in navbar", user);
 
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
-    signInWithRedirect(auth, provider);
+    signInWithPopup(auth, provider);
   };
 
   const signOut = () => {
@@ -37,4 +40,5 @@ const NavBar = () => {
     </nav>
   );
 };
+
 export default NavBar;
