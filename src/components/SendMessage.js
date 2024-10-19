@@ -1,20 +1,3 @@
-// import React, { useState } from "react";
-// import { auth, db } from "../firebase";
-// import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-
-// const SendMessage = ({ scroll }) => {
-//   const [message, setMessage] = useState("");
-
-//   return (
-//     <form className="send-message">
-//       <input value={message} onChange={(e) => setMessage(e.target.value)} />
-//       <button type="submit">Send</button>
-//     </form>
-//   );
-// };
-
-// export default SendMessage;
-
 import React, { useState } from "react";
 import { auth, db, firestore } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
@@ -28,13 +11,13 @@ const SendMessage = ({ scroll }) => {
       alert("Enter valid message");
       return;
     }
-    // const { uid, displayName, photoURL } = auth.currentUser;
+    const { uid, displayName, photoURL } = auth.currentUser;
     await addDoc(collection(db, "messages"), {
       text: message,
-      // name: displayName,
-      // avatar: photoURL,
+      name: displayName,
+      avatar: photoURL,
       createdAt: serverTimestamp(),
-      // uid,
+      uid,
     });
     setMessage("");
     scroll.current.scrollIntoView({ behavior: "smooth" });
