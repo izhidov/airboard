@@ -4,4 +4,4 @@ Airboard is a Progressive Web Application which allows the users to easily setup
 
 The initial application will be developed during [Oklathon 2024](https://techlahoma.github.io/oklathon/). 
 
-We will follow a pragamtic approach and get MVP out as soon as possible.
+We will follow a pragmatic approach and get MVP out as soon as possible.
