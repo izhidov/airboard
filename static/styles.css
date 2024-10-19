@@ -1,0 +1,83 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Change to a more modern font */
+    background-color: #f4f4f4; /* Light background color for contrast */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6; /* Improved line spacing */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #4caf50, #81c784); /* Gradient background */
+    color: white;
+    padding: 1.5rem 0; /* Increased padding for a more spacious header */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Larger heading */
+}
+
+/* Form Styles */
+form {
+    max-width: 600px; /* Center the form with max width */
+    margin: 2rem auto; /* Center form with auto margins */
+    padding: 2rem; /* Padding around the form */
+    background: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+form input,
+form button,
+form textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin: 0.5rem 0; /* Spacing between elements */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+form button {
+    background-color: #4caf50; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.2rem; /* Larger button text */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+form button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Output Styles */
+#output {
+    margin: 2rem auto; /* Center output */
+    padding: 1rem; /* Padding around output */
+    background: #e8f5e9; /* Light green background */
+    border-left: 5px solid #4caf50; /* Left border for emphasis */
+    font-size: 1.2rem; /* Slightly larger text */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem; /* Smaller header on mobile */
+    }
+
+    form {
+        padding: 1rem; /* Less padding on mobile */
+    }
+
+    form button {
+        font-size: 1rem; /* Smaller button text on mobile */
+    }
+}
