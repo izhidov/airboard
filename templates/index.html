@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Emoji Converter</title>
+</head>
+<body>
+    <h1>Emoji Generator</h1>
+    <form id="emojiForm" method="POST" action="/convert">
+        <label for="gender">Select Gender (optional):</label>
+        <select id="gender" name="gender">
+            <option value="gender-neutral">Gender-Neutral</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="non-binary">Non-Binary</option>
+        </select>
+    
+        <label for="text">Enter Text:</label>
+        <textarea id="text" name="text" required></textarea>
+    
+        <button type="submit">Generate Emoji</button>
+    </form>
+
+    <h2>Generated Emojis:</h2>
+    <div id="output" style="font-size: 24px;"></div> 
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
